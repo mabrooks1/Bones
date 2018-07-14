@@ -24,7 +24,7 @@ class CoreTest extends WP_UnitTestCase {
 	function test_theme_version() {
 		$bones_theme = new Bones_Theme();
 
-		if (is_string($bones_theme->get_version())) {
+		if ( is_string( $bones_theme->get_version() ) ) {
 			$this->assertTrue( true );
 		} else {
 			$this->assertTrue( false );

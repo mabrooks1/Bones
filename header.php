@@ -18,9 +18,9 @@
 </head>
 <body <?php body_class(); ?>>
 <header>
-    <div class="container">
-        <div class="row">
+	<div class="container">
+		<div class="row">
 
-        </div>
-    </div>
+		</div>
+	</div>
 </header>
