@@ -8,7 +8,7 @@
  */
 
 if ( ! defined( 'BONES_DIR' ) ) {
-	define( 'BONES_DIR', trailingslashit( __DIR__ ) );
+	define( 'BONES_DIR', trailingslashit( get_theme_file_path() ) );
 }
 
 require BONES_DIR . 'classes/class-bones-theme.php';
