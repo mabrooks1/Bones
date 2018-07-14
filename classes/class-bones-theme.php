@@ -1,39 +1,71 @@
 <?php
+/**
+ * Core Theme
+ *
+ * @category Core
+ * @package  Bones
+ * @author   Level Up Digital
+ */
 
-if (!class_exists('bones_theme')) {
+if ( ! class_exists( 'Bones_Theme' ) ) {
 
-    class bones_theme {
+	/**
+	 * Class Bones_Theme
+	 */
+	class Bones_Theme {
 
-        CONST VERSION = '1.0.0';
+		/**
+		 * Theme Version
+		 */
+		const VERSION = '1.0.0';
 
-        public function __construct()
-        {
-            $this->load_classes();
-            $this->set_hooks();
-            $this->set_theme_support();
-        }
+		/**
+		 * Bones_Theme constructor.
+		 */
+		public function __construct() {
+			$this->load_classes();
+			$this->set_hooks();
+			$this->set_theme_support();
+		}
 
-        public function load_classes() {
-            require BONES_DIR . 'classes/class-bones-blocks.php';
-            new bones_blocks();
-        }
+		/**
+		 * Loads the classes needed
+		 */
+		public function load_classes() {
+			require BONES_DIR . 'classes/class-bones-blocks.php';
+			new Bones_Blocks();
+		}
 
-        public function set_hooks() {
-            add_action( 'wp_enqueue_scripts', [$this, 'get_assets'] );
-        }
+		/**
+		 * Sets the theme hooks
+		 */
+		public function set_hooks() {
+			add_action( 'wp_enqueue_scripts', [ $this, 'get_assets' ] );
+		}
 
-        public function get_assets() {
-            wp_enqueue_style('main', get_theme_root_uri('assets/css/main.css'), [], $this->get_version(), 'all');
-        }
+		/**
+		 * Loads the theme assets
+		 */
+		public function get_assets() {
+			wp_enqueue_style( 'main', get_theme_root_uri( 'assets/css/main.css' ), array(), $this->get_version(), 'all' );
+		}
 
-        public function get_version() {
-            return self::VERSION;
-        }
+		/**
+		 * Returns the theme version
+		 *
+		 * @return string
+		 */
+		public function get_version() {
+			return self::VERSION;
+		}
 
-        public function set_theme_support() {
-            add_theme_support( 'title-tag' );
-        }
+		/**
+		 * Sets the theme support
+		 */
+		public function set_theme_support() {
+			add_theme_support( 'title-tag' );
+		}
 
-    }
+	}
 
 }

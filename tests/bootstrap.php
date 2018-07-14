@@ -17,11 +17,14 @@ if ( ! file_exists( $_tests_dir . '/includes/functions.php' ) ) {
 // Give access to tests_add_filter() function.
 require_once $_tests_dir . '/includes/functions.php';
 
+/**
+ * Registers the theme for the tests
+ */
 function _register_theme() {
 
-	$theme_dir = dirname( __DIR__ );
+	$theme_dir     = dirname( __DIR__ );
 	$current_theme = basename( $theme_dir );
-	$theme_root = dirname( $theme_dir );
+	$theme_root    = dirname( $theme_dir );
 
 	add_filter( 'theme_root', function() use ( $theme_root ) {
 		return $theme_root;

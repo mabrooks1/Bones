@@ -1,3 +1,13 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Index Template
+ *
+ * @category Templates
+ * @package  Bones
+ * @author   Level Up Digital
+ */
 
-<?php get_footer(); ?>
+get_header(); ?>
+
+<?php
+get_footer();
