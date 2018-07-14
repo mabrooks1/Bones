@@ -40,7 +40,7 @@ if ( ! class_exists( 'Bones_Theme' ) ) {
 		 * Sets the theme hooks
 		 */
 		public function set_hooks() {
-			add_action( 'wp_enqueue_scripts', [ $this, 'get_assets' ] );
+			add_action( 'wp_enqueue_scripts', array( $this, 'get_assets' ) );
 		}
 
 		/**
