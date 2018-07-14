@@ -14,7 +14,7 @@ if (!class_exists('bones_theme')) {
         }
 
         public function load_classes() {
-            require BONES_DIR . 'classes/class-bones_blocks.php';
+            require BONES_DIR . 'classes/class-bones-blocks.php';
             new bones_blocks();
         }
 
