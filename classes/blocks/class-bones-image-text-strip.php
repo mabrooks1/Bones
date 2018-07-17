@@ -18,7 +18,7 @@ if ( ! class_exists( 'Bones_Image_Text_Strip' ) ) {
 		 * Bones_Image_Text_Strip constructor.
 		 */
 		public function __construct() {
-			
+
 		}
 
 	}

@@ -18,9 +18,25 @@
 </head>
 <body <?php body_class(); ?>>
 <header>
-	<div class="container">
-		<div class="row">
+	<div class="header-top">
+		<div class="container<?php echo( get_theme_mod( 'bones_header_top_size' ) === 'fullwidth' ? '-fluid' : ' ' ); ?>">
+			<div class="row">
 
+			</div>
+		</div>
+	</div>
+	<div class="header-middle">
+		<div class="container<?php echo( get_theme_mod( 'bones_header_middle_size' ) === 'fullwidth' ? '-fluid' : ' ' ); ?>">
+			<div class="row">
+
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom">
+		<div class="container<?php echo( get_theme_mod( 'bones_header_bottom_size' ) === 'fullwidth' ? '-fluid' : ' ' ); ?>">
+			<div class="row">
+
+			</div>
 		</div>
 	</div>
 </header>
